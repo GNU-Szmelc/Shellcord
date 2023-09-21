@@ -1,2 +1,6 @@
 # Shellcord
-Shell Discord 'client'
+> Shell based Discord 'client'
+
+## Howto
+- post.py ~ c2s
+- get.py ~ s2c
