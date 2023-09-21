@@ -6,3 +6,4 @@
 ## Howto
 - post.py ~ c2s
 - get.py ~ s2c
+- hook.py ~ Simple webhook (can pass text file as message)
