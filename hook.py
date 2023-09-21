@@ -1,12 +1,20 @@
 import argparse
 import requests
+import mimetypes
 
 # Replace this with your Discord webhook URL
-WEBHOOK_URL = "https://discord.com/api/webhooks/{CHANNEL ID}/{WEBHOOK TOKEN}"
+WEBHOOK_URL = "https://discord.com/api/webhooks/your_webhook_url_here"
 
-def send_message_to_discord(message):
+def send_message_to_discord(message, file_paths=[]):
     payload = {"content": message}
-    response = requests.post(WEBHOOK_URL, json=payload)
+    files = []
+
+    for file_path in file_paths:
+        mime_type, _ = mimetypes.guess_type(file_path)
+        if mime_type:
+            files.append(("file", (file_path, open(file_path, "rb"), mime_type)))
+
+    response = requests.post(WEBHOOK_URL, data=payload, files=files)
 
     if response.status_code == 204:
         print("Message sent successfully to Discord.")
@@ -15,23 +23,17 @@ def send_message_to_discord(message):
         print(response.text)
 
 def main():
-    parser = argparse.ArgumentParser(description="Send messages to a Discord webhook or log messages to a file.")
+    parser = argparse.ArgumentParser(description="Send messages and media files to a Discord webhook.")
     parser.add_argument("--message", "-m", help="The message to send to Discord.")
-    parser.add_argument("--file", "-f", help="The path to a file containing messages to send to Discord.")
+    parser.add_argument("--file", "-f", nargs="*", help="The path to media files to send to Discord.")
     parser.add_argument("--log", "-l", help="Log messages to a file.")
 
     args = parser.parse_args()
 
     if args.message:
-        send_message_to_discord(args.message)
+        send_message_to_discord(args.message, args.file)
     elif args.file:
-        try:
-            with open(args.file, "r") as file:
-                messages = file.read().splitlines()
-                for message in messages:
-                    send_message_to_discord(message)
-        except FileNotFoundError:
-            print(f"File not found: {args.file}")
+        send_message_to_discord("Uploaded media:", args.file)
     elif args.log:
         try:
             with open(args.log, "a") as log_file:
