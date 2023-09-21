@@ -3,7 +3,14 @@
 
 ## Howto
 - `post.py` ~ client -> server
+> c2s v4 / media & file as a payload \
 > Post on Server/Channel as BOT from local terminal
+```
+usage: post.py
+Enter the message you want to send 
+([media] to send files / or [exit] to quit): media
+Enter the path to the media file (e.g., image.jpg): image.jpg
+```
 - `get.py` ~ server -> client
 > "Listen to" Server chat in local terminal
 - `hook.py` ~ Simple webhook
@@ -23,8 +30,11 @@ options:
 ```
 ## Screenshots
 ### Early concept of post / get terminal 'client'
-<img src="https://i.imgur.com/5WX5KMf.png" alt="image" width="400" height="350"> \
-### Basic Webhook
-<img src="https://i.imgur.com/CRP6BFt.png" alt="image" width="400" height="350">
+<img src="https://i.imgur.com/aysNIkv.png" alt="image" width="400" height="350"> \
+### Basic Webhook [v2]
+<img src="https://i.imgur.com/CRP6BFt.png" alt="image" width="400" height="350"> \
+### Example Bot post.py [v4]
+<img src="https://i.imgur.com/IBsTjEj.png" alt="image" width="400" height="350">
+<img src="https://i.imgur.com/yzqxb7Y.png" alt="image">
 
 > Special thanks to `User-31415` for help in debugging code.
