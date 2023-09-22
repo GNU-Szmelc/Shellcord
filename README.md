@@ -8,6 +8,7 @@
 ```
 - post ~ Post message / files as Token holder (bot or user)
 - get ~ Get messages from servers
+- get2 ~ Get & Img / Attachment support
 - hook ~ Webhook (same as post but for Webhook instead of BOT)
 - cmd1 ~ Commands 1 (save messages, media and something fun!)
 ```
