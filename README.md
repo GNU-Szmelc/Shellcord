@@ -48,7 +48,10 @@ Commands added:
 ### Basic Webhook [v2]
 <img src="https://i.imgur.com/CRP6BFt.png" alt="image" width="400" height="350"> \
 ### Example Bot post.py [v4]
-<img src="https://i.imgur.com/IBsTjEj.png" alt="image" width="400" height="350">
-<img src="https://i.imgur.com/yzqxb7Y.png" alt="image">
+<img src="https://i.imgur.com/IBsTjEj.png" alt="image" width="400" height="350"> \
+<img src="https://i.imgur.com/yzqxb7Y.png" alt="image"> \
+### Example Bot /commands & /save_logs log.txt
+<img src="https://i.imgur.com/rLp4vVJ.png" alt="image"> \
+<img src="https://i.imgur.com/gYoA7Xm.png" alt="image"> \
 
 > Special thanks to `User-31415` for help in debugging code.
