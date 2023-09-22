@@ -1,7 +1,10 @@
 # Shellcord
 > Discord Bot / Hook 'client' for console 
+## 101
+- First create your Bot / Hook on https://discord.com/developers/applications
+- Get & Save `TOKEN`
 
-## Howto / Details
+## Scripts
 ```
 - post ~ Post message / files as Token holder (bot or user)
 - get ~ Get messages from servers
