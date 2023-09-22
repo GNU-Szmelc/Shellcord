@@ -1,7 +1,13 @@
 # Shellcord
 > Discord Bot / Hook 'client' for console 
 
-## Howto
+## Howto / Details
+```
+- post ~ Post message / files as Token holder (bot or user)
+- get ~ Get messages from servers
+- hook ~ Webhook (same as post but for Webhook instead of BOT)
+- cmd1 ~ Commands 1 (save messages, media and something fun!)
+```
 - `post.py` ~ client -> server
 > c2s v4 / media & file as a payload \
 > Post on Server/Channel as BOT from local terminal
@@ -27,6 +33,14 @@ options:
   --file FILE, -f FILE  The path to a file containing messages to
                         send to Discord.
   --log LOG, -l LOG     Log messages to a file.
+```
+- `cmd1.py` ~ Simple `/` commands
+> Pretty much same as `get.py` but supports specified commands & their functions
+```
+Commands added:
+/save_logs - Save last x messages as log.txt
+/save_media - Save media from current channel into media folder
+/bruh - Mention user who triggered command + local image.jpg as payload.
 ```
 ## Screenshots
 ### Early concept of post / get terminal 'client'
