@@ -31,7 +31,7 @@ def main():
     args = parser.parse_args()
 
     if args.message:
-        send_message_to_discord(args.message, args.file)
+        send_message_to_discord(args.message)
     elif args.file:
         send_message_to_discord("Uploaded media:", args.file)
     elif args.log:
